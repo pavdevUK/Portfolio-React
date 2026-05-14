@@ -74,7 +74,7 @@ function Cv() {
               <ul>
                 <li>
                   <strong>Frontend:</strong> React, Next.js, TypeScript,
-                  Tailwind, Styled-Components, Redux Toolkit, Zustand
+                  Tailwind, Styled-Components, Zustand
                 </li>
                 <li>
                   <strong>Backend:</strong> Node.js, Express.js, MongoDB,
@@ -82,7 +82,7 @@ function Cv() {
                 </li>
                 <li>
                   <strong>AI & Automation:</strong> OpenAI API, AI-powered
-                  features, data processing
+                  features, data processing, Puppeteer
                 </li>
                 <li>
                   <strong>Cloud & DevOps:</strong> Vercel, Google Cloud
@@ -127,6 +127,7 @@ function Cv() {
               <ExperienceWrapper>
                 <div className='cv-h5-nonMargin-top'>
                   <span>Profit Radar </span>
+                  <time>November 2025 – present</time>
                 </div>
                 <p className='textPrimary'>
                   Full-stack Next.js platform for Copart auction intelligence.
@@ -144,6 +145,7 @@ function Cv() {
               <ExperienceWrapper>
                 <div className='cv-h5'>
                   <span>Timeline Generator</span>
+                  <time>November 2025 – present</time>
                 </div>
                 <p className='textPrimary'>
                   Full-stack Next.js application that automates GitHub commit
@@ -166,6 +168,7 @@ function Cv() {
                       (files conversion tool)
                     </span>
                   </span>
+                  <time>June 2025 – November 2025</time>
                 </div>
                 <p className='textPrimary'>
                   File converter built with TypeScript and styled with Tailwind.
@@ -178,21 +181,23 @@ function Cv() {
               <ExperienceWrapper>
                 <div className='cv-h5 print-page-break-before'>
                   <span>Work Tracker</span>
+                  <time> March 2023 – September 2023</time>
                 </div>
                 <p className='textPrimary'>
-                  Work Tracker is a full-stack payroll management app for
+                  Work Tracker is a server-side payroll management app for
                   businesses with complex shift patterns. Built with
-                  Node.js/Express and React, it tracks work hours and calculates
-                  earnings across multiple pay rates (base, night, weekend,
-                  overtime). Features include yearly calendar generation,
-                  payroll period tracking, RESTful API, MongoDB integration, and
-                  schedule management. The system supports employee
-                  self-service, automated payroll, and flexible scheduling.
+                  Node.js/Express, it tracks work hours and calculates earnings
+                  across multiple pay rates (base, night, weekend, overtime).
+                  Features include yearly calendar generation, payroll period
+                  tracking, RESTful API, MongoDB integration, and schedule
+                  management. The system supports employee self-service,
+                  automated payroll, and flexible scheduling.
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
                 <div className='cv-h5'>
                   <span>Portfolio</span>
+                  <time>March 2020 – present</time>
                 </div>
                 <p className='textPrimary'>
                   Developed and continuously improved a full-stack portfolio
@@ -218,9 +223,7 @@ function Cv() {
                 <span>Relevant Coursework</span>
               </div>
               <ul>
-                <li>
-                  Complete React Developer (2021, w/ Redux, Hooks, GraphQL)
-                </li>
+                <li>Complete React Developer (2021, Redux, Hooks, GraphQL)</li>
                 <li>JavaScript - Understanding the Weird Parts</li>
                 <li>The Modern JavaScript Bootcamp Course (2020)</li>
                 <li>React styled-components v5 (2021 edition)</li>
