@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { boxShadow12 } from 'styled.js';
 import { connect } from 'react-redux';
 import React, { useEffect, useState } from 'react';
-import Stack from './Stack';
+// import Stack from './Stack';
 import Header from '../common/Header';
 
 const Underline = styled.div`
@@ -25,10 +25,10 @@ const Wrapper = styled.div`
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
-  border-radius: 20px;
+  border-radius: 5px;
   ${boxShadow12};
   max-width: 450px;
-  height: 488px;
+  height: 390px;
   flex: 1 1 360px;
   @media (max-width: 600px) {
     max-width: 100%;
@@ -47,7 +47,7 @@ const HeaderWrapper = styled.div`
   @media (max-width: 600px) {
     margin: 5px auto 0px auto;
   }
-  margin: 0px auto 0px auto;
+  margin: 8px auto 0px auto;
   width: 100%;
   display: flex;
   position: relative;
@@ -67,16 +67,18 @@ const ImgWrapper = styled.div`
   width: 100%;
   height: 220px;
   overflow: hidden;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
   flex-shrink: 0;
   @media (max-width: 600px) {
     height: 180px;
   }
 `;
 const StImg = styled.img`
-  display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
 `;
 const ButtonWrapper = styled.div`
   justify-content: space-between;
@@ -110,23 +112,6 @@ const A = styled.a`
   }
 `;
 
-const YearWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 110px;
-  height: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #172a3f;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 13px;
-  z-index: 10000;
-`;
-
 const HeaderInnerWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -151,7 +136,7 @@ function Card({ ...props }) {
       <ImgWrapper>
         <StImg src={props.item.src} alt={props.item.alt}></StImg>
       </ImgWrapper>
-      {width >= 650 ? <Stack stack={props.stack}></Stack> : null}
+      {/* {width >= 650 ? <Stack stack={props.stack}></Stack> : null} */}
       <HeaderWrapper>
         <TitleWrapper>
           <Header>

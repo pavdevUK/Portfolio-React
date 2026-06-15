@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 60px;
+  gap: 25px;
   @media (max-width: 600px) {
     gap: 16px;
   }
