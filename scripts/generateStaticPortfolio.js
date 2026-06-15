@@ -13,100 +13,100 @@ const babel = require('@babel/core');
 const transformModulesCommonJS = require('@babel/plugin-transform-modules-commonjs');
 
 function prettifyTechLabel(raw) {
-    const key = String(raw || '').trim();
-    const dictionary = {
-        js: 'JavaScript',
-        ts: 'TypeScript',
-        nextjs: 'Next.js',
-        nodeJS: 'Node.js',
-        gcloud: 'Google Cloud',
-        chatgpt: 'OpenAI',
-        router: 'React Router',
-        styled: 'styled-components',
-        mongo: 'MongoDB',
-        express: 'Express',
-        vercel: 'Vercel',
-        npm: 'npm',
-    };
+  const key = String(raw || '').trim();
+  const dictionary = {
+    js: 'JavaScript',
+    ts: 'TypeScript',
+    nextjs: 'Next.js',
+    nodeJS: 'Node.js',
+    gcloud: 'Google Cloud',
+    chatgpt: 'OpenAI',
+    router: 'React Router',
+    styled: 'styled-components',
+    mongo: 'MongoDB',
+    express: 'Express',
+    vercel: 'Vercel',
+    npm: 'npm',
+  };
 
-    if (dictionary[key]) return dictionary[key];
-    if (!key) return '';
+  if (dictionary[key]) return dictionary[key];
+  if (!key) return '';
 
-    return key
-        .replace(/([a-z])([A-Z])/g, '$1 $2')
-        .replace(/[_-]+/g, ' ')
-        .replace(/\b\w/g, (c) => c.toUpperCase());
+  return key
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function createImgStub() {
-    return new Proxy({}, {
-        get: (_, prop) => {
-            const label = prettifyTechLabel(prop);
-            return { title: label, alt: label };
-        }
-    });
+  return new Proxy({}, {
+    get: (_, prop) => {
+      const label = prettifyTechLabel(prop);
+      return { title: label, alt: label };
+    }
+  });
 }
 
 function loadConfigModule(relativePath) {
-    const absolutePath = path.join(__dirname, relativePath);
-    const source = fs.readFileSync(absolutePath, 'utf-8');
+  const absolutePath = path.join(__dirname, relativePath);
+  const source = fs.readFileSync(absolutePath, 'utf-8');
 
-    const transformed = babel.transformSync(source, {
-        filename: absolutePath,
-        babelrc: false,
-        configFile: false,
-        plugins: [transformModulesCommonJS],
-    });
+  const transformed = babel.transformSync(source, {
+    filename: absolutePath,
+    babelrc: false,
+    configFile: false,
+    plugins: [transformModulesCommonJS],
+  });
 
-    const Module = require('module');
-    const mod = new Module(absolutePath, module.parent);
-    mod.filename = absolutePath;
-    mod.paths = Module._nodeModulePaths(path.dirname(absolutePath));
+  const Module = require('module');
+  const mod = new Module(absolutePath, module.parent);
+  mod.filename = absolutePath;
+  mod.paths = Module._nodeModulePaths(path.dirname(absolutePath));
 
-    const localRequire = (request) => {
-        if (request === 'img') return createImgStub();
-        if (request.startsWith('.')) {
-            return require(path.resolve(path.dirname(absolutePath), request));
-        }
-        return require(request);
-    };
+  const localRequire = (request) => {
+    if (request === 'img') return createImgStub();
+    if (request.startsWith('.')) {
+      return require(path.resolve(path.dirname(absolutePath), request));
+    }
+    return require(request);
+  };
 
-    mod.require = localRequire;
-    mod._compile(transformed.code, absolutePath);
+  mod.require = localRequire;
+  mod._compile(transformed.code, absolutePath);
 
-    return mod.exports;
+  return mod.exports;
 }
 
 // Load and normalize source-of-truth data from React config files
 function loadConfigData() {
-    const projectsConfig = loadConfigModule('../src/config/projects.config.js');
-    const stackConfig = loadConfigModule('../src/config/stack.config.js');
+  const projectsConfig = loadConfigModule('../src/config/projects.config.js');
+  const stackConfig = loadConfigModule('../src/config/stack.config.js');
 
-    const projectsData = (projectsConfig.projects || [])
-        .filter((project) => project && project.title && project.text)
-        .slice(0, 6)
-        .map((project) => ({
-            title: project.title,
-            text: project.text,
-            stack: (project.stack || [])
-                .map((tech) => tech?.title || tech?.alt || prettifyTechLabel(tech))
-                .filter(Boolean),
-            webHref: project.webHref?.href || '',
-            githubHref: project.githubHref || '',
-        }));
+  const projectsData = (projectsConfig.projects || [])
+    .filter((project) => project && project.title && project.text)
+    .slice(0, 6)
+    .map((project) => ({
+      title: project.title,
+      text: project.text,
+      stack: (project.stack || [])
+        .map((tech) => tech?.title || tech?.alt || prettifyTechLabel(tech))
+        .filter(Boolean),
+      webHref: project.webHref?.href || '',
+      githubHref: project.githubHref || '',
+    }));
 
-    const skillsData = Array.from(new Set(
-        (stackConfig.stack?.tools || [])
-            .map((tool) => tool?.title)
-            .filter(Boolean)
-    ));
+  const skillsData = Array.from(new Set(
+    (stackConfig.stack?.tools || [])
+      .map((tool) => tool?.title)
+      .filter(Boolean)
+  ));
 
-    return { projectsData, skillsData };
+  return { projectsData, skillsData };
 }
 
 function generateProjectsHTML(projectsData) {
-    return projectsData
-        .map(project => `
+  return projectsData
+    .map(project => `
     <article class="project">
       <h3>${project.title}</h3>
       <p>${project.text}</p>
@@ -119,17 +119,17 @@ function generateProjectsHTML(projectsData) {
       </div>
     </article>
   `)
-        .join('');
+    .join('');
 }
 
 function generateSkillsHTML(skillsData) {
-    return skillsData
-        .map(skill => `<li>${skill}</li>`)
-        .join('');
+  return skillsData
+    .map(skill => `<li>${skill}</li>`)
+    .join('');
 }
 
 function generateHTML(projectsData, skillsData) {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -341,7 +341,7 @@ function generateHTML(projectsData, skillsData) {
       <p class="subtitle">Reading, UK</p>
       <div class="contact-links">
         <a href="https://pawelsiwek.co.uk/content" target="_blank" rel="noopener noreferrer">Interactive Portfolio</a>
-        <a href="https://github.com/pawdevuk" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/pavdevuk" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://linkedin.com/in/pawel-siwek-78432119b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="mailto:contact@pawelsiwek.co.uk">Email</a>
       </div>
@@ -388,13 +388,13 @@ function generateHTML(projectsData, skillsData) {
 
 // Main execution
 try {
-    const { projectsData, skillsData } = loadConfigData();
-    const outputPath = path.join(__dirname, '../public/portfolio.html');
-    const html = generateHTML(projectsData, skillsData);
+  const { projectsData, skillsData } = loadConfigData();
+  const outputPath = path.join(__dirname, '../public/portfolio.html');
+  const html = generateHTML(projectsData, skillsData);
 
-    fs.writeFileSync(outputPath, html, 'utf-8');
-    console.log(`✅ Generated static portfolio at: ${outputPath}`);
+  fs.writeFileSync(outputPath, html, 'utf-8');
+  console.log(`✅ Generated static portfolio at: ${outputPath}`);
 } catch (error) {
-    console.error('❌ Error generating portfolio:', error.message);
-    process.exit(1);
+  console.error('❌ Error generating portfolio:', error.message);
+  process.exit(1);
 }

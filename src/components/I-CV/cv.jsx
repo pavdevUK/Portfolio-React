@@ -48,7 +48,7 @@ function Cv() {
                 <div className='info'>
                   <a href='https://pawelsiwek.co.uk'>PawelSiwek.co.uk</a>
                 </div>
-                <div className='info'>PawDevUK</div>
+                <div className='info'>PavDevUK</div>
                 <div className='info'>+44 7463 765514</div>
                 <div className='info'>Reading, UK</div>
                 <div className='info'>English (Fluent), Polish (Native)</div>

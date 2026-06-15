@@ -4,7 +4,7 @@ import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, j
 export const projects = [
     {
         alt: "Profit Radar",
-        githubHref: "https://github.com/PawDevUK/profit-radar",
+        githubHref: "https://github.com/PavDevUK/profit-radar",
         src: profitRadar,
         text: "Modern Next.js application and scraping toolkit for tracking Copart auctions, exploring sale calendars, and analyzing lot details with market enrichment.",
         title: "Profit Radar",
@@ -13,7 +13,7 @@ export const projects = [
     },
     {
         alt: "Timeline Generator",
-        githubHref: "https://github.com/PawDevUK/TLG",
+        githubHref: "https://github.com/PavDevUK/TLG",
         src: tlg,
         text: "Full-stack Next.js application that automatically tracks GitHub repositories and generates AI-powered daily summaries.",
         title: "Timeline Generator",
@@ -22,7 +22,7 @@ export const projects = [
     },
     {
         alt: "FilesConverto.com",
-        githubHref: "https://github.com/pawdevuk/Filesconverto",
+        githubHref: "https://github.com/pavdevuk/Filesconverto",
         src: filesconverto,
         text: "Next.js + TypeScript web application for converting, compressing, and managing files in various formats. The platform features a drag-and-drop uploader.",
         title: "FilesConverto",
@@ -31,7 +31,7 @@ export const projects = [
     },
     {
         alt: "TicTacToe",
-        githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe",
+        githubHref: "https://github.com/pavdevuk/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe",
         src: TicTacToe,
         text: "Tic-tac-toe is a game where two players take turns placing 'O' or 'X' on a 3x3 grid. This React app features a simple interface and a game logic.",
         title: "Tic Tac Toe",
@@ -40,7 +40,7 @@ export const projects = [
     },
     {
         alt: "Covid-app",
-        githubHref: "https://github.com/pawdevuk/Covid-Tracker",
+        githubHref: "https://github.com/pavdevuk/Covid-Tracker",
         src: CovidApp,
         text: "Application providing information and data related to COVID-19. It's a React app created with Create React App and styled with styled-components.",
         title: "Covid-Data",
@@ -49,7 +49,7 @@ export const projects = [
     },
     {
         alt: "Chat Bot",
-        githubHref: "https://github.com/pawdevuk/Messenger ",
+        githubHref: "https://github.com/pavdevuk/Messenger ",
         src: bot,
         text: "Chat Bot is a simple app that lets anyone converse with an AI. It's simple and fun. Chat history and a MERN-stack backend will be added later.",
         title: "Chat Bot",
@@ -58,7 +58,7 @@ export const projects = [
     },
     {
         alt: "Fitness App",
-        githubHref: "https://github.com/pawdevuk/FitnessApp",
+        githubHref: "https://github.com/pavdevuk/FitnessApp",
         src: fitnessApp,
         text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
         title: "Fitness App",
@@ -67,16 +67,16 @@ export const projects = [
     },
     {
         alt: "Nasa",
-        githubHref: "https://github.com/pawdevuk/Nasa",
+        githubHref: "https://github.com/pavdevuk/Nasa",
         src: nasa,
         text: "Website about space-related events and topics using the NASA API. The front page focuses on SpaceX; other pages contain space images.",
         title: "Nasa",
-        webHref: { href: "https://pawdevuk.github.io/NASA/", button: "Visit" },
+        webHref: { href: "https://pavdevuk.github.io/NASA/", button: "Visit" },
         stack: [js, html, css, bootstrap, git, vscode]
     },
     // {
     //     alt: "Register",
-    //     githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
+    //     githubHref: "https://github.com/pavdevuk/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
     //     src: register,
     //     text: "Simple app with home and login components. The app has two color schemes and is built with React, styled-components, and react-router-dom.",
     //     title: "Register/Sign in Page",
@@ -85,36 +85,36 @@ export const projects = [
     // },
     {
         alt: "Royal Oak Architects",
-        githubHref: "https://github.com/pawdevuk/Architect",
+        githubHref: "https://github.com/pavdevuk/Architect",
         src: royal,
         text: "A light, mobile-first website for customers who prefer simple, clean designs. Built using Bootstrap.",
         title: "Royal Oak Architects",
-        webHref: { href: "https://pawdevuk.github.io/Architect/", button: "Visit" },
+        webHref: { href: "https://pavdevuk.github.io/Architect/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     }, {
         alt: "Gentlemen Barber",
-        githubHref: "https://github.com/pawdevuk/Barber",
+        githubHref: "https://github.com/pavdevuk/Barber",
         src: barber,
         text: "Simple Bootstrap barber website. It's informative and written in a friendly tone to appeal to customers of all ages.",
         title: "Gentlemen Barber",
-        webHref: { href: "https://pawdevuk.github.io/Barber/", button: "Visit" },
+        webHref: { href: "https://pavdevuk.github.io/Barber/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     },
     {
         alt: "Goodwood Solicitors",
-        githubHref: "https://github.com/pawdevuk/Solicitors",
+        githubHref: "https://github.com/pavdevuk/Solicitors",
         src: solicitors,
         text: "Mobile-first website with navigation to subpages. Features a light color scheme, parallax image, contact form, and more.",
         title: "Goodwood Solicitors",
-        webHref: { href: "https://pawdevuk.github.io/Solicitors/", button: "Visit" },
+        webHref: { href: "https://pavdevuk.github.io/Solicitors/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     }, {
         alt: "Asparago",
-        githubHref: "https://github.com/pawdevuk/Architect",
+        githubHref: "https://github.com/pavdevuk/Architect",
         src: asparago,
         text: "Bootstrap restaurant page with menu, carousel, content, location, and parallax background images. The modern design provides easy access to information.",
         title: "Asparago",
-        webHref: { href: "https://pawdevuk.github.io/asparago.online/", button: "Visit" },
+        webHref: { href: "https://pavdevuk.github.io/asparago.online/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     }
 ]

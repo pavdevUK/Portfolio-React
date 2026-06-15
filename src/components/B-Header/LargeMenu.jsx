@@ -83,7 +83,7 @@ function MainLarge({ ...props }) {
 
   return (
     <Wrapper>
-      <MainLogo>pawdev</MainLogo>
+      <MainLogo>pavdev</MainLogo>
       <InnerMainNav EngLang={props.EngLang}>
         <LangWrapper>
           <LangSwitch></LangSwitch>
