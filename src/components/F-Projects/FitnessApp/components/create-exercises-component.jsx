@@ -48,7 +48,7 @@ export default function CreateExercises() {
 
   return (
     <div>
-      <h3>Create new Exercise Log</h3>
+      <h3 style={{ fontWeight: 400 }}>Create new Exercise Log</h3>
       <form action='' onSubmit={handleSubmit}>
         <div className='form-group col-12 col-md-6 mt-5 mx-auto'>
           <label>Username:</label>

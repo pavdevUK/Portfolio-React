@@ -10,3 +10,9 @@
     src: url('./fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('./fonts/Nunito_Sans/NunitoSans-Regular.ttf') format('truetype');
+    font-style: normal;
+}

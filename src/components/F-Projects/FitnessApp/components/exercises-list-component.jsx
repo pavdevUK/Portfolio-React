@@ -30,7 +30,7 @@ export default function ExercisesList() {
 
   return (
     <div>
-      <h3>You are on Exercises List Component</h3>
+      <h3 style={{ fontWeight: 400 }}>You are on Exercises List Component</h3>
       <table className='table mt-4'>
         <thead>
           <tr>

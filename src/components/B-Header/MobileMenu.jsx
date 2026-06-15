@@ -49,7 +49,7 @@ const MobilNav = styled.div`
 `;
 const LinkContainer = styled.div`
   padding-bottom: 20px;
-  margin: 16px auto 0px 86px;
+  margin: 10px auto 0px 86px;
   height: auto;
   @media (min-width: 992px) {
     display: none;
@@ -79,7 +79,7 @@ const DropDown = styled(MobileLink)`
 const MobileText = styled.p`
   color: #444444;
   display: inline-block;
-  margin: 16px auto 16px 48px;
+  margin: 6px auto 6px 48px;
   @media (min-width: 992px) {
     display: none;
   }
@@ -87,6 +87,7 @@ const MobileText = styled.p`
 export default function MobileMenu() {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
+  const MOBILE_HEADER_OFFSET = 0;
 
   function click() {
     setToggle((p) => !p);
@@ -95,6 +96,50 @@ export default function MobileMenu() {
   function handleMouseHover() {
     setMouseOver((mouseOver) => !mouseOver);
   }
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top =
+        el.getBoundingClientRect().top + window.scrollY - MOBILE_HEADER_OFFSET;
+      window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
+    }
+  };
+
+  const closeMenuThenScroll = (id) => {
+    setToggle(false);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        scrollToSection(id);
+      });
+    });
+  };
+
+  const handleNavClick = (event, item) => {
+    if (item?.section) {
+      event.preventDefault();
+      closeMenuThenScroll(item.section);
+      return;
+    }
+
+    if (item?.href?.startsWith('#')) {
+      event.preventDefault();
+      closeMenuThenScroll(item.href.replace('#', ''));
+      return;
+    }
+
+    setToggle(false);
+  };
+
+  const handleReactDropdownClick = (event, item) => {
+    if (!item?.react?.href) {
+      return;
+    }
+
+    event.preventDefault();
+    closeMenuThenScroll(item.react.href);
+  };
+
   return (
     <Wrapper>
       <MobilTopDiv>
@@ -123,18 +168,12 @@ export default function MobileMenu() {
               onMouseEnter={item.react ? handleMouseHover : null}
               onMouseLeave={item.react ? handleMouseHover : null}
               key={i}
-              href={item.href}
+              href={item.href || `#${item.section || ''}`}
+              target={item.target ? item.target : ''}
+              onClick={(event) => handleNavClick(event, item)}
             >
               {item.title}
-              <SlideDown>
-                {mouseOver ? (
-                  <DropDown href={item.href}>
-                    {item.react ? item.react.title : null}
-                  </DropDown>
-                ) : item.react ? (
-                  <DropDowIcon path={dropdown}></DropDowIcon>
-                ) : null}
-              </SlideDown>
+              <SlideDown></SlideDown>
             </MobileLink>
           ))}
         </LinkContainer>

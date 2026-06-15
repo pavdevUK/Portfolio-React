@@ -47,7 +47,7 @@ export default function CreateUser() {
 
   return (
     <div>
-      <h3>You are on Create/Delate User Page.</h3>
+      <h3 style={{ fontWeight: 400 }}>You are on Create/Delate User Page.</h3>
       <form action='' onSubmit={handleSubmit}>
         <div className='form-group col-12 col-md-6 mt-5 mx-auto'>
           <label>User</label>

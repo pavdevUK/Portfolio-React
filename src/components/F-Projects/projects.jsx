@@ -19,13 +19,13 @@ const MainWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 80%;
+  width: 100%;
   margin: 20px auto 0px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 24px;
+  gap: 60px;
   @media (max-width: 600px) {
     gap: 16px;
   }

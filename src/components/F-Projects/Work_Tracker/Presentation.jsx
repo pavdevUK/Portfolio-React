@@ -453,7 +453,16 @@ function Presentation({ data }) {
           </SummaryCards>
 
           {/* Hours Breakdown */}
-          <h2 style={{ marginBottom: '15px', color: '#333' }}>
+          <h2
+            style={{
+              marginBottom: '15px',
+              color: '#333',
+              fontSize: '20px',
+              textTransform: 'capitalize',
+              padding: '10px 0px 0px 0px',
+              margin: '0px',
+            }}
+          >
             Hours Breakdown
           </h2>
           <HoursBreakdown>
@@ -472,7 +481,18 @@ function Presentation({ data }) {
           </HoursBreakdown>
 
           {/* Calendar Grid */}
-          <h2 style={{ marginBottom: '15px', color: '#333' }}>Calendar View</h2>
+          <h2
+            style={{
+              marginBottom: '15px',
+              color: '#333',
+              fontSize: '20px',
+              textTransform: 'capitalize',
+              padding: '10px 0px 0px 0px',
+              margin: '0px',
+            }}
+          >
+            Calendar View
+          </h2>
           <CalendarGrid>
             {data.calendar.map((day) => (
               <DayCell key={day.id} inWork={day.inWork}>
@@ -488,7 +508,16 @@ function Presentation({ data }) {
           </CalendarGrid>
 
           {/* Detailed Table */}
-          <h2 style={{ marginBottom: '15px', color: '#333' }}>
+          <h2
+            style={{
+              marginBottom: '15px',
+              color: '#333',
+              fontSize: '20px',
+              textTransform: 'capitalize',
+              padding: '10px 0px 0px 0px',
+              margin: '0px',
+            }}
+          >
             Detailed Work Log
           </h2>
           <TableContainer>
@@ -529,7 +558,18 @@ function Presentation({ data }) {
           </TableContainer>
 
           {/* Rates Info */}
-          <h2 style={{ marginBottom: '15px', color: '#333' }}>Pay Rates</h2>
+          <h2
+            style={{
+              marginBottom: '15px',
+              color: '#333',
+              fontSize: '20px',
+              textTransform: 'capitalize',
+              padding: '10px 0px 0px 0px',
+              margin: '0px',
+            }}
+          >
+            Pay Rates
+          </h2>
           <HoursBreakdown>
             <HourCard color='#667eea'>
               <HourLabel>Basic Rate</HourLabel>

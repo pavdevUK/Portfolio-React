@@ -1,4 +1,4 @@
-import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, momentjs, copilot, chatgpt, vercel } from 'img'
+import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, momentjs, copilot, chatgpt, vercel, pup } from 'img'
 
 export const stack = {
     header: 'What I Use',
@@ -123,6 +123,12 @@ export const stack = {
             title: "Vercel",
             text: "",
             webHref: "https://ubuntu.com/",
+        },
+        {
+            img: pup,
+            title: "Puppeteer",
+            text: "",
+            webHref: "https://pptr.dev/",
         },
         // {
         //     img: python,

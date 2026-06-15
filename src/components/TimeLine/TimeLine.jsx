@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import { defaultArticles } from './articles';
 import JumboSectionHeader from '../common/JumboSectionHeader';
 import Header from 'components/common/Header';
-import { P } from '../common/typography';
+import styled from 'styled-components';
 
 const TimelineSection = () => {
   const theme = useTheme();
@@ -59,6 +59,12 @@ const TimelineSection = () => {
     document.addEventListener('mouseup', handleMouseUp);
   };
 
+  const Description = styled.p`
+    font-size: 18px;
+    font-weight: 700;
+    margin: 30px 5px 30px 15px;
+  `;
+
   return (
     <Box
       component='section'
@@ -68,6 +74,9 @@ const TimelineSection = () => {
       }}
     >
       <JumboSectionHeader>Timeline</JumboSectionHeader>
+      <Description>
+        A chronological log of development work completed across my projects.
+      </Description>
       <Container maxWidth='md'>
         <Box
           ref={scrollRef}
@@ -75,7 +84,7 @@ const TimelineSection = () => {
           sx={{
             ml: { sm: 2 },
             pl: 1,
-            maxHeight: '500px',
+            maxHeight: '700px',
             overflowY: 'auto',
             overflowX: 'hidden',
             cursor: 'grab',
@@ -145,9 +154,7 @@ const TimelineSection = () => {
                 >
                   {article.date}
                 </Typography>
-
-                {/* Description */}
-                <P>{article.description}</P>
+                <p className='styledP'>{article.description}</p>
               </Box>
             ))}
           </Box>

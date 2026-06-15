@@ -6,31 +6,6 @@ body {
   background: #f5f5f5;
 }
 
-h2 {
-  font-size: 20px;
-  padding-bottom: 15px;
-  margin: 0px;
-  text-transform: capitalize;
-  padding: 10px 0px 0px 0px;
-}
-
-h3 {
-  font-weight: 400;
-}
-
-h4 {
-  padding-top: 10px;
-  margin: 0px;
-  font-size: 20px;
-  color: #007297;
-  text-transform: capitalize;
-}
-
-h5 {
-  font-size: 18px;
-  line-height: 24px;
-}
-
 p {
   color: rgba(0, 0, 0, 0.7);
   font-size: 16px;
@@ -40,7 +15,7 @@ p {
 }
 
 .styledP {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgb(0, 0, 0);
   margin: 10px;
 }
 
@@ -55,13 +30,14 @@ article {
   border-top: 1px solid #d3d3d3;
 }
 
-time {
-  font-weight: normal;
-  float: right;
-}
+
 
 .bold {
   font-weight: 600;
+}
+
+.MuiBox-root {
+  padding-top: 0px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

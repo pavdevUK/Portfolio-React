@@ -6,11 +6,6 @@ import styled, { css } from 'styled-components';
 import AOS from 'aos';
 
 const Wrapper = styled.div`
-  @media (max-width: 700px) {
-    margin: 10px;
-    height: 130px;
-    width: 130px;
-  }
   margin: 5px;
   height: 100px;
   width: 100px;
@@ -26,18 +21,18 @@ const Text = styled.p`
   font-size: 16px;
 `;
 const Img = styled.img`
-  @media (max-width: 700px) {
+  /* @media (max-width: 700px) {
     ${(p) =>
-      p.styled
-        ? css`
-            width: 80px;
-            height: 60px;
-          `
-        : css`
-            width: 100px;
-            height: 80px;
-          `};
-  }
+    p.styled
+      ? css`
+          width: 80px;
+          height: 60px;
+        `
+      : css`
+          width: 100px;
+          height: 80px;
+        `};
+  } */
   width: 100%;
   height: 70%;
   object-fit: scale-down;

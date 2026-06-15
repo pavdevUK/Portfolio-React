@@ -12,11 +12,9 @@ const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   //mobile size
   @media (max-width: 700px) {
     font-size: 15px;
-    width: 120px;
   }
   @media (min-width: 700px) {
     height: ${(p) => (p.height ? p.height : '30px')};

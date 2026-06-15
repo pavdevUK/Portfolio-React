@@ -43,7 +43,7 @@ const Wrapper = styled.div`
 `
 
 const Container = styled.div`
-    width: 80%;
+    width: 90%;
     @media (min-width: 992px) {
         width: 1000px;
     }

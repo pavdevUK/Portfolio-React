@@ -1,33 +1,35 @@
 :root {
-    --primary-text-color: #232222;
+    --primary-text-color: #000000;
 }
 
 .textPrimary {
     color: var(--primary-text-color);
 }
 
-.page {
+#cv {
+    padding: 30px;
     color: var(--primary-text-color);
     max-width: 900px;
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 1px 0px 25px rgba(50, 50, 50, 0.75);
+    letter-spacing: 0.03em;
 }
 
-#topEpierance {
-    margin-top: 0px;
-}
-
-#cv {
-    padding: 30px 0px 0px 0px;
+#cv h2 {
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin: 0px;
+    text-transform: capitalize;
+    padding: 10px 0px 0px 0px;
 }
 
 .cv-h5,
 .cv-h5-nonMargin-top,
-.cv-h5-for-Donload {
+.cv-h5-for-Download {
     font-weight: bold;
     text-transform: capitalize;
-    font-size: 19px;
+    font-size: 16px;
     margin: 20px 0px 5px 0px;
 }
 
@@ -39,20 +41,66 @@
     margin-top: 0px;
 }
 
-.cv-h5-for-Donload {
+.cv-h5-for-Download {
     margin-top: 120px
 }
 
 .info {
     font-size: 18px;
+    margin-right: 10px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
+    .grid {
+        /* margin-top: 20px; */
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+    }
+
     .page {
         margin-top: 30px;
         margin-bottom: 30px;
         padding-top: 25px;
     }
+}
+
+@media (min-width: 600px) {
+    #art-about {
+        padding-right: 30px;
+    }
+}
+
+@media(max-width: 600px) {
+    #cv {
+        padding: 0px;
+    }
+
+    #name {
+        width: 250px;
+    }
+
+    .Skills {
+        column-count: 2;
+        column-gap: 12px;
+    }
+
+    .sectionPadding {
+        padding: 0px 5px 10px 5px;
+    }
+
+    #cont-art {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 0px 0px 0px;
+
+    }
+
+    time {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
 }
 
 #header {
@@ -63,15 +111,40 @@
     text-transform: capitalize;
 }
 
-#name {
-    font-size: 35px;
+#header-info {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    text-transform: none;
 }
 
-@media(max-width: 600px) {
-    #name {
-        width: 250px;
-    }
+#name {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
 }
+
+h4 {
+    /* padding-top: 10px; */
+    margin: 0px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+#cont-art {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 5px 0px 0px 0px; */
+
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #007fb9;
+    font-weight: 600;
+}
+
 
 .Tools {
     font-weight: bold;
@@ -85,11 +158,7 @@
     justify-content: space-between;
 }
 
-@media (min-width: 600px) {
-    #art-about {
-        padding-right: 30px;
-    }
-}
+
 
 #firstSkillsSet {
     margin: 0px;
@@ -108,13 +177,6 @@
 .Skills li {
     break-inside: avoid;
     /* margin-bottom: 8px; */
-}
-
-@media (max-width: 600px) {
-    .Skills {
-        column-count: 2;
-        column-gap: 12px;
-    }
 }
 
 .Skills ul li {
@@ -140,10 +202,6 @@ a:hover {
 
 }
 
-#cont-art {
-    padding: 10px 0px 10px 0px;
-}
-
 .grid {
     /* margin-top: 20px; */
     display: grid;
@@ -151,12 +209,9 @@ a:hover {
 
 }
 
-@media (min-width: 800px) {
-    .grid {
-        /* margin-top: 20px; */
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-    }
+time {
+    font-weight: normal;
+    float: right;
 }
 
 /* header */
@@ -204,4 +259,47 @@ ul {
 /* work/edu */
 .non-margin-top {
     margin-top: 0px;
+}
+
+@page {
+    size: A4;
+    margin: 8mm;
+}
+
+@media print {
+    .print-page-break-before {
+        break-before: page;
+        page-break-before: always;
+        margin-top: 0;
+    }
+
+    .page {
+        box-shadow: none !important;
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+
+    }
+
+    .page,
+    #cv {
+        max-width: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        font-family: Arial, Helvetica, sans-serif;
+        text-rendering: geometricPrecision;
+    }
+
+    #cv {
+        zoom: 1.12;
+        width: calc(100% / 1.12) !important;
+    }
+
+    .sectionPadding {
+        padding: 0 12px 8px 12px;
+    }
+
+    article {
+        padding-top: 6px;
+    }
 }

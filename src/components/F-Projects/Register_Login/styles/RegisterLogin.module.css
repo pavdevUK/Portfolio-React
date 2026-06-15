@@ -1,3 +1,8 @@
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .invalid {
   color: red;
   margin-left: 0.25rem;
@@ -131,4 +136,6 @@
 .linksWrapper {
   width: 100%;
   margin: 20px 0px;
-}/*# sourceMappingURL=RegisterLogin.module.css.map */
+}
+
+/*# sourceMappingURL=RegisterLogin.module.css.map */

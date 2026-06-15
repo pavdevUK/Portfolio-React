@@ -186,10 +186,8 @@ export default function Contact() {
         <InnerWrapper>
           <JumboSectionHeader>Contact</JumboSectionHeader>
           <P>
-            If you would like to contact me regarding any queries please don't{' '}
-            <br /> hesitate and drop me an email or call me directly on my
-            mobile. <br /> I'm always more than happy to speak and answer any
-            questions.
+            If you have any questions, please do not hesitate to email me or
+            call me directly on my mobile. I am always happy to help.
           </P>
           <hr />
           <ContactInfo>

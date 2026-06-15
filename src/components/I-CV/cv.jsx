@@ -3,8 +3,9 @@ import './cv.css';
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div``;
-
+const Wrapper = styled.div`
+  font-family: NunitoSans-Regular;
+`;
 const ExperienceWrapper = styled.div`
   padding-right: 30px;
   @media (max-width: 600px) {
@@ -22,15 +23,26 @@ function Cv() {
   return (
     <>
       <Wrapper>
-        <div id='cv' className='page'>
-          <header className='grid-plus sectionPadding'>
+        <div id='cv'>
+          <header className='sectionPadding'>
             <div id='header-info'>
-              <h1 id='name'>Pawel Siwek</h1>
-              <h2>Full-Stack Developer</h2>
+              <div>
+                <h1 id='name'>Pawel Siwek</h1>
+                <h4>JavaScript Full-Stack Developer</h4>
+              </div>
             </div>
+            <section className='grid sectionPadding'>
+              <div id='cont-art'>
+                <div className='info'>p.f.siwek@gmail.com</div>
+                <div className='info'>pawelsiwek.co.uk</div>
+                <div className='info'>+44 7463 765514</div>
+                <div className='info'>Reading, UK</div>
+              </div>
+            </section>
           </header>
 
           <section className='grid sectionPadding'>
+<<<<<<< HEAD
             <header>
               <h4>Contact Details</h4>
             </header>
@@ -60,64 +72,41 @@ function Cv() {
             <header>
               <h4>About Me</h4>
             </header>
+=======
+            <div className='section-header'>
+              <p>About Me</p>
+            </div>
+>>>>>>> 0c899536acdec31e6a967bcc471b19d417335e8a
             <Article id='art-about' className='textPrimary'>
               <p className='textPrimary'>
-                I'm a Full-Stack Developer based in Reading, UK, focused on
-                building modern, responsive web applications. I specialize in{' '}
-                <strong>React</strong>, <strong>Next.js (App Router)</strong>,{' '}
-                <strong>TypeScript</strong>, <br />
-                and <strong>Node.js</strong>, always prioritizing clean
-                architecture and user experience.
-              </p>
-              <p className='textPrimary'>
-                My work spans full-stack web applications, from responsive
-                front-end interfaces and state management with{' '}
-                <strong>Redux Toolkit</strong> and <strong>Zustand</strong> to
-                scalable back-end systems, <strong>RESTful APIs</strong>, and
-                deployments on <strong>Vercel</strong> and{' '}
-                <strong>Google Cloud Platform</strong>.
-              </p>
-              <p className='textPrimary'>
-                In production environments, I actively use{' '}
-                <strong>TypeScript</strong> and increasingly incorporate AI
-                capabilities—particularly <strong>OpenAI API models</strong>—to
-                enable intelligent automation, data processing, and smarter
-                application features.
+                I’m a Full-Stack Developer based in Reading, UK, building
+                modern, data-driven web applications with React, Next.js (App
+                Router), TypeScript, and Node.js. I deliver end-to-end features,
+                from responsive front-end interfaces and Zustand-based state
+                management to backend APIs and database design.
               </p>
               <br />
               <p className='textPrimary'>
-                Recent projects include{' '}
-                <strong>TLG (timeline generator)</strong> a Next.js app that
-                tracks GitHub activity and generates AI-powered summaries and{' '}
-                <strong>Profit Radar</strong>, a tool for monitoring Copart
-                auctions with AI-driven insights. Both highlight my skills in
-                API integration, MongoDB, and practical automation.
-                <br />
-              </p>
-              <br />
-              <p className='textPrimary'>
-                Professionally, I gained hands-on experience at{' '}
-                <strong>Filament AI</strong> in 2021, customizing chat widgets
-                and extending <strong>Google Cloud Functions</strong> for client
-                projects.
-              </p>
-              <p className='textPrimary'>
-                I'm committed to clean code, best practices, automated testing,
-                and continuous learning in full-stack and AI-augmented
-                development.
+                My recent work combines product engineering with automation and
+                AI. I build scraping and enrichment pipelines with Puppeteer,
+                process and normalize large data sets, and use OpenAI-based
+                parsing to turn unstructured data into useful application
+                features. I focus on clean architecture, reliability, and user
+                experience, aiming to ship software that is both maintainable
+                and valuable for end users.
               </p>
             </Article>
           </section>
 
           <section className='grid sectionPadding'>
-            <header>
-              <h4>Skills</h4>
-            </header>
+            <div className='section-header'>
+              <p>Skills</p>
+            </div>
             <Article id='art-know' className='skills-columns'>
               <ul>
                 <li>
                   <strong>Frontend:</strong> React, Next.js, TypeScript,
-                  Tailwind, Styled-Components, Redux Toolkit
+                  Tailwind, Styled-Components, Redux Toolkit, Zustand
                 </li>
                 <li>
                   <strong>Backend:</strong> Node.js, Express.js, MongoDB,
@@ -137,24 +126,51 @@ function Cv() {
               </ul>
             </Article>
           </section>
-
           <section className='grid sectionPadding'>
-            <header>
-              <h4>Experience</h4>
-            </header>
+            <div className='section-header'>
+              <p>Experience</p>
+            </div>
+            <Article id='art-work'>
+              <ExperienceWrapper>
+                <div className='cv-h5-nonMargin-top'>
+                  <span>Full-Stack Developer – Filament AI</span>
+                  <time>April 2021 – December 2021</time>
+                </div>
+                <p className='textPrimary'>
+                  Developed and customized chat widgets for multiple clients,
+                  aligning with website themes and functional requirements
+                  (e.g., Rentokil, Versus Arthritis). Extended Google Cloud
+                  Functions to support ticket creation with additional service
+                  options. Configured and optimized EBM chatbot dialog flows,
+                  adding new features to meet client needs. Enhanced Filament UI
+                  (custom CSS library) by implementing new features and
+                  resolving bugs. <br></br>
+                  <strong>Tools & Technologies:</strong> React, Node.js, Google
+                  Cloud Functions, EBM, Filament UI, REST APIs
+                </p>
+              </ExperienceWrapper>
+            </Article>
+          </section>
+          <section className='grid sectionPadding'>
+            <div className='section-header'>
+              <p>Projects</p>
+            </div>
             <Article id='art-work'>
               <ExperienceWrapper>
                 <div className='cv-h5-nonMargin-top'>
                   <span>Profit Radar </span>
                 </div>
                 <p className='textPrimary'>
-                  Next.js tool for Copart auction monitoring with server-side
-                  scraping, proxy support, MongoDB persistence, and AI title
-                  parsing. Helps identify potential resale opportunities.
+                  Full-stack Next.js platform for Copart auction intelligence.
+                  It automates auction calendar and sale-list scraping, stores
+                  and updates lot data in MongoDB, enriches vehicle metadata
+                  with AI-powered parsing, and supports resale opportunity
+                  analysis with Otomoto market checks.
                 </p>
                 <p className='textPrimary'>
                   <strong>Tools & Technologies:</strong> Next.js (App Router),
-                  TypeScript, Puppeteer, MongoDB, OpenAI API, Vercel
+                  TypeScript, React, Puppeteer, MongoDB (Mongoose), OpenAI API,
+                  Zustand, SWR, Tailwind CSS
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
@@ -177,7 +193,10 @@ function Cv() {
                 <div className='cv-h5'>
                   <span>
                     FilesConverto.com
-                    <span className='cv-low-case'> (file conversion tool)</span>
+                    <span className='cv-low-case'>
+                      {' '}
+                      (files conversion tool)
+                    </span>
                   </span>
                 </div>
                 <p className='textPrimary'>
@@ -189,7 +208,7 @@ function Cv() {
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
-                <div className='cv-h5'>
+                <div className='cv-h5 print-page-break-before'>
                   <span>Work Tracker</span>
                 </div>
                 <p className='textPrimary'>
@@ -222,36 +241,10 @@ function Cv() {
               </ExperienceWrapper>
             </Article>
           </section>
-          <section className='grid sectionPadding'>
-            <header>
-              <h4>Professional Experience</h4>
-            </header>
-            <Article id='art-work'>
-              <ExperienceWrapper>
-                <div className='cv-h5-nonMargin-top'>
-                  <span>Full-Stack Developer – Filament AI</span>
-                  <time>April 2021 – December 2021</time>
-                </div>
-                <p className='textPrimary'>
-                  Developed and customized chat widgets for multiple clients,
-                  aligning with website themes and functional requirements
-                  (e.g., Rentokill, Versus Arthritis). Extended Google Cloud
-                  Functions to support ticket creation with additional service
-                  options. Configured and optimized EBM chatbot dialog flows,
-                  adding new features to meet client needs. Enhanced Filament UI
-                  (custom CSS library) by implementing new features and
-                  resolving bugs.
-                  <strong>Tools & Technologies:</strong> React, Node.js, Google
-                  Cloud Functions, EBM, Filament UI, REST APIs
-                </p>
-              </ExperienceWrapper>
-            </Article>
-          </section>
-
-          <section className='grid sectionPadding'>
-            <header>
-              <h4>Education</h4>
-            </header>
+          <section className='grid sectionPadding '>
+            <div className='section-header'>
+              <p>Education</p>
+            </div>
             <Article>
               <div className='cv-h5-nonMargin-top'>
                 <span>Relevant Coursework</span>
@@ -281,12 +274,7 @@ function Cv() {
 
                 <div className='cv-h5'>
                   <span>Technical School of Mechanical Engineering</span>
-                  <time>2003 – 2004</time>
-                </div>
-
-                <div className='cv-h5'>
-                  <span>Basic Vocational School</span>
-                  <time>2000 – 2003</time>
+                  <time>2000 – 2004</time>
                 </div>
               </SchoolSection>
             </Article>
