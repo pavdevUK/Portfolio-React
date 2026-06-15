@@ -42,41 +42,9 @@ function Cv() {
           </header>
 
           <section className='grid sectionPadding'>
-<<<<<<< HEAD
-            <header>
-              <h4>Contact Details</h4>
-            </header>
-            <Article className='grid-plus' id='cont-art'>
-              <div id='left'>
-                <div className='head'>Email:</div>
-                <div className='head'>Portfolio:</div>
-                <div className='head'>GitHub:</div>
-                <div className='head'>Telephone:</div>
-                <div className='head'>Location:</div>
-                <div className='head'>Languages:</div>
-              </div>
-              <div id='right'>
-                <div className='info'>P.F.Siwek@gmail.com</div>
-                <div className='info'>
-                  <a href='https://pawelsiwek.co.uk'>PawelSiwek.co.uk</a>
-                </div>
-                <div className='info'>PavDevUK</div>
-                <div className='info'>+44 7463 765514</div>
-                <div className='info'>Reading, UK</div>
-                <div className='info'>English (Fluent), Polish (Native)</div>
-              </div>
-            </Article>
-          </section>
-
-          <section className='grid sectionPadding'>
-            <header>
-              <h4>About Me</h4>
-            </header>
-=======
             <div className='section-header'>
               <p>About Me</p>
             </div>
->>>>>>> 0c899536acdec31e6a967bcc471b19d417335e8a
             <Article id='art-about' className='textPrimary'>
               <p className='textPrimary'>
                 I’m a Full-Stack Developer based in Reading, UK, building

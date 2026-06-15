@@ -84,14 +84,10 @@ export const projects = [
         src: nasa,
         text: "Website about space-related events and topics using the NASA API. The front page focuses on SpaceX; other pages contain space images.",
         title: "Nasa",
-<<<<<<< HEAD
-        webHref: { href: "https://pavdevuk.github.io/NASA/", button: "Visit" },
-=======
         year: "2020",
 
 
         webHref: { href: "https://pawdevuk.github.io/NASA/", button: "Visit" },
->>>>>>> 0c899536acdec31e6a967bcc471b19d417335e8a
         stack: [js, html, css, bootstrap, git, vscode]
     },
     // {
@@ -109,13 +105,9 @@ export const projects = [
         src: royal,
         text: "A light, mobile-first website for customers who prefer simple, clean designs. Built using Bootstrap.",
         title: "Royal Oak Architects",
-<<<<<<< HEAD
-        webHref: { href: "https://pavdevuk.github.io/Architect/", button: "Visit" },
-=======
         year: "2020",
 
         webHref: { href: "https://pawdevuk.github.io/Architect/", button: "Visit" },
->>>>>>> 0c899536acdec31e6a967bcc471b19d417335e8a
         stack: [html, css, bootstrap, git, vscode]
     }, {
         alt: "Gentlemen Barber",
@@ -123,12 +115,8 @@ export const projects = [
         src: barber,
         text: "Simple Bootstrap barber website. It's informative and written in a friendly tone to appeal to customers of all ages.",
         title: "Gentlemen Barber",
-<<<<<<< HEAD
-        webHref: { href: "https://pavdevuk.github.io/Barber/", button: "Visit" },
-=======
         year: "2020",
         webHref: { href: "https://pawdevuk.github.io/Barber/", button: "Visit" },
->>>>>>> 0c899536acdec31e6a967bcc471b19d417335e8a
         stack: [html, css, bootstrap, git, vscode]
     },
     {
@@ -137,13 +125,9 @@ export const projects = [
         src: solicitors,
         text: "Mobile-first website with navigation to subpages. Features a light color scheme, parallax image, contact form, and more.",
         title: "Goodwood Solicitors",
-<<<<<<< HEAD
-        webHref: { href: "https://pavdevuk.github.io/Solicitors/", button: "Visit" },
-=======
         year: "2020",
 
         webHref: { href: "https://pawdevuk.github.io/Solicitors/", button: "Visit" },
->>>>>>> 0c899536acdec31e6a967bcc471b19d417335e8a
         stack: [html, css, bootstrap, git, vscode]
     }, {
         alt: "Asparago",
@@ -151,12 +135,8 @@ export const projects = [
         src: asparago,
         text: "Bootstrap restaurant page with menu, carousel, content, location, and parallax background images. The modern design provides easy access to information.",
         title: "Asparago",
-<<<<<<< HEAD
-        webHref: { href: "https://pavdevuk.github.io/asparago.online/", button: "Visit" },
-=======
         year: "2020",
         webHref: { href: "https://pawdevuk.github.io/asparago.online/", button: "Visit" },
->>>>>>> 0c899536acdec31e6a967bcc471b19d417335e8a
         stack: [html, css, bootstrap, git, vscode]
     }
 ]
