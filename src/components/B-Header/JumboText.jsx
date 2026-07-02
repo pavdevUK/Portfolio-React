@@ -86,7 +86,7 @@ export function JumboMainText({ ...props }) {
         <Quote>{props.author}</Quote>
       </JumboHeaderWrapper>
       <JumboText>{props.p}</JumboText>
-      <Anchor href='https://github.com/pawdevuk' target='_blank'>
+      <Anchor href='https://github.com/pavdevuk' target='_blank'>
         <Button
           width='200px'
           height=' 50px'
